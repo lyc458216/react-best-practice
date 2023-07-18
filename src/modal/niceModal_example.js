@@ -22,7 +22,7 @@ function MyModalExample() {
     const modal = useNiceModal("my-modal");
     return (
         <>
-            <Button type="primary" onClick={() => modal.show(args).then(result => { })}>
+            <Button type="primary" onClick={() => modal.show()}>
                 Show Modal
             </Button>
             <MyModal />
