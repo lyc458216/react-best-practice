@@ -1,5 +1,7 @@
 import { useState, useMemo, useCallback } from "react";
-
+// Form 最为核心的机制就是将表单元素的所有状态提取出来
+// 这样表单就可以分为状态逻辑和 UI 展现逻辑
+// 从而实现数据层和表现层的分离
 const useForm = (initialValues = {}, validators) => {
     const [values, setValues] = useState(initialValues);
     const [errors, setErrors] = useState({});
