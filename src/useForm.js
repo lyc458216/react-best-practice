@@ -12,8 +12,9 @@ const useForm = (initialValues = {}, validators) => {
                 ...values,
                 [name]: value,
             }));
-
+            // 如果这个值有校验项
             if (validators[name]) {
+                // 校验该值
                 const errMsg = validators[name](value);
                 setErrors((errors) => ({
                     ...errors,
