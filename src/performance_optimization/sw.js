@@ -21,10 +21,12 @@ self.addEventListener('fetch', function(e) {
         // 使用 cache.match
         return cache.match(e.request).then(res => {
             if (res) {
-                // 如果缓存存在则直接返回结果 return Promise.resolve(res);
+                // 如果缓存存在则直接返回结果 
+                return Promise.resolve(res);
             } else {
                 // 否则发出请求，并存到 cache
-                const req = new Request(e.request.url); return fetch(corsRequest).then(res => {
+                const req = new Request(e.request.url); 
+                return fetch(corsRequest).then(res => {
                     // 更新 cache
                     cache.put(request, res.clone());
                     return res;

@@ -10,8 +10,8 @@ if('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('/sw.js')
         .then(()=> {
-            // 注册成功
-            console.log('Service worker registered.');
+        // 注册成功
+        console.log('Service worker registered.');
     }, (err) => {
         // 注册失败
         console.log('ServiceWorker registration failed: ', err);
